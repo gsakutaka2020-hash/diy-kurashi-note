@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<BaseLayout
+  title="プライバシーポリシー"
+  description="DIYと暮らしのリアルノートのプライバシーポリシーです。"
+  noindex={true}
+>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <Breadcrumb items={[{ label: 'プライバシーポリシー' }]} />
+
+    <h1 class="text-2xl font-bold text-gray-900 mb-8">プライバシーポリシー</h1>
+
+    <div class="prose-article bg-white rounded-2xl border border-gray-200 p-8">
+      <h2>個人情報の取扱いについて</h2>
+      <p>
+        「DIYと暮らしのリアルノート」（以下、当サイト）では、お問い合わせ時にお名前・メールアドレスを
+        取得することがありますが、これらは回答のためにのみ使用し、第三者への提供は行いません。
+      </p>
+
+      <h2>アクセス解析について</h2>
+      <p>
+        当サイトでは、Googleアナリティクスを使用してアクセス解析を行っています。
+        Googleアナリティクスはトラッキングのためにクッキーを使用しており、
+        個人を特定できる情報は含まれません。
+      </p>
+
+      <h2>広告について</h2>
+      <p>
+        当サイトはアフィリエイト広告（Amazonアソシエイト・楽天アフィリエイト等）を利用しています。
+        広告配信のためにクッキーを使用することがあります。
+      </p>
+
+      <h2>免責事項</h2>
+      <p>
+        当サイトの情報は個人の体験に基づくものです。情報の正確性・安全性については保証できません。
+        当サイトのリンク先で発生したいかなる損害についても責任を負いません。
+      </p>
+
+      <p class="text-xs text-gray-400 mt-8">最終更新日：2024年4月1日</p>
+    </div>
+  </div>
+</BaseLayout>

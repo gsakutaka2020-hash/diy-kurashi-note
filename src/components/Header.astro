@@ -1,0 +1,94 @@
+---
+const navItems = [
+  { label: 'DIY・リフォーム', href: '/category/diy/', color: 'hover:text-orange-500' },
+  { label: 'ガジェット・家電', href: '/category/gadget/', color: 'hover:text-blue-500' },
+  { label: '生活・暮らしの知恵', href: '/category/kurashi/', color: 'hover:text-emerald-500' },
+  { label: 'ガンダム関連', href: '/category/gundam/', color: 'hover:text-purple-500' },
+  { label: 'AI・テクノロジー', href: '/category/ai/', color: 'hover:text-pink-500' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+  <div class="max-w-5xl mx-auto px-4">
+    <!-- ロゴ行 -->
+    <div class="flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2 group">
+        <span class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white text-sm font-bold shrink-0">家</span>
+        <span class="font-bold text-gray-900 text-sm sm:text-base leading-tight group-hover:text-brand-600 transition-colors">
+          DIYと暮らしの<br class="sm:hidden" />リアルノート
+        </span>
+      </a>
+
+      <!-- ハンバーガーメニュー（モバイル） -->
+      <button
+        id="menu-toggle"
+        class="sm:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- ナビゲーション（PC） -->
+    <nav class="hidden sm:flex items-center gap-1 pb-2 overflow-x-auto" aria-label="メインナビゲーション">
+      {navItems.map(item => (
+        <a
+          href={item.href}
+          class={`text-sm px-3 py-1.5 rounded-full whitespace-nowrap transition-colors font-medium
+            ${currentPath.startsWith(item.href)
+              ? 'bg-brand-600 text-white'
+              : `text-gray-600 hover:bg-gray-100 ${item.color}`
+            }`}
+        >
+          {item.label}
+        </a>
+      ))}
+      <a
+        href="/about/"
+        class="text-sm px-3 py-1.5 rounded-full whitespace-nowrap text-gray-500 hover:bg-gray-100 hover:text-gray-700 transition-colors ml-auto"
+      >
+        プロフィール
+      </a>
+    </nav>
+  </div>
+
+  <!-- モバイルメニュー -->
+  <nav id="mobile-menu" class="hidden sm:hidden bg-white border-t border-gray-100 px-4 py-3" aria-label="モバイルナビゲーション">
+    <ul class="space-y-1">
+      {navItems.map(item => (
+        <li>
+          <a
+            href={item.href}
+            class={`block px-3 py-2.5 rounded-lg text-sm font-medium transition-colors
+              ${currentPath.startsWith(item.href)
+                ? 'bg-brand-50 text-brand-700'
+                : 'text-gray-700 hover:bg-gray-50'
+              }`}
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+      <li>
+        <a href="/about/" class="block px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50">
+          プロフィール
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = menu?.classList.toggle('hidden') === false;
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+</script>

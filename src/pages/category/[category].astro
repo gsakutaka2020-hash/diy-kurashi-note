@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+export async function getStaticPaths() {
+  const categories = ['diy', 'gadget', 'kurashi', 'gundam', 'ai'] as const;
+  return categories.map(cat => ({
+    params: { category: cat },
+  }));
+}
+
+const { category } = Astro.params;
+
+const categoryInfo: Record<string, { label: string; description: string; icon: string; color: string }> = {
+  diy:    { label: 'DIY・リフォーム',    description: '古民家リフォームや壁・床・外構のDIY体験談。費用・期間・失敗談まで全部公開。',  icon: '🔨', color: 'text-orange-600' },
+  gadget: { label: 'ガジェット・家電',   description: '実際に購入・使用したガジェット・家電の正直レビュー。メリット・デメリットを包み隠さず。', icon: '📱', color: 'text-blue-600' },
+  kurashi:{ label: '生活・暮らしの知恵', description: '節約・収納・料理・掃除など、毎日の暮らしを快適にするヒントをお届け。', icon: '🌿', color: 'text-emerald-600' },
+  gundam: { label: 'ガンダム関連',       description: 'ガンプラ制作記録・ガンダム作品の考察・聖地巡礼など。ガンダム好きによるガンダム記事。', icon: '🤖', color: 'text-purple-600' },
+  ai:     { label: 'AI・テクノロジー',   description: 'ChatGPT・Claude・画像生成AIなど最新のAIツール活用術と技術トレンド解説。', icon: '💡', color: 'text-pink-600' },
+};
+
+const info = categoryInfo[category!] ?? { label: category, description: '', icon: '📝', color: '' };
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft && data.category === category);
+const sortedPosts = allPosts.sort((a, b) =>
+  new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
+---
+
+<BaseLayout
+  title={`${info.label}の記事一覧`}
+  description={info.description}
+>
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <Breadcrumb items={[{ label: info.label }]} />
+
+    <!-- カテゴリヘッダー -->
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-3xl">{info.icon}</span>
+        <h1 class={`text-2xl font-bold ${info.color}`}>{info.label}</h1>
+      </div>
+      <p class="text-sm text-gray-600 leading-relaxed">{info.description}</p>
+      <p class="text-xs text-gray-400 mt-2">{sortedPosts.length}件の記事</p>
+    </div>
+
+    <!-- 記事一覧 -->
+    {sortedPosts.length > 0 ? (
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {sortedPosts.map(post => (
+          <ArticleCard
+            title={post.data.title}
+            description={post.data.description}
+            slug={post.slug}
+            category={post.data.category}
+            pubDate={post.data.pubDate}
+            thumbnail={post.data.thumbnail}
+            tags={post.data.tags}
+          />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-16 text-gray-400">
+        <p class="text-4xl mb-4">📝</p>
+        <p>まだ記事がありません。しばらくお待ちください。</p>
+      </div>
+    )}
+  </div>
+</BaseLayout>

@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<BaseLayout
+  title="お問い合わせ"
+  description="DIYと暮らしのリアルノートへのお問い合わせはこちらから。"
+  noindex={true}
+>
+  <div class="max-w-2xl mx-auto px-4 py-8">
+    <Breadcrumb items={[{ label: 'お問い合わせ' }]} />
+
+    <h1 class="text-2xl font-bold text-gray-900 mb-6">お問い合わせ</h1>
+
+    <div class="bg-white rounded-2xl border border-gray-200 p-8">
+      <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+        記事に関するご質問・ご意見・ご感想などはこちらからお気軽にどうぞ。
+        なお、返信にはお時間をいただく場合があります。
+      </p>
+
+      <form name="contact" method="POST" data-netlify="true" class="space-y-5">
+        <input type="hidden" name="form-name" value="contact" />
+
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">お名前 <span class="text-red-500">*</span></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent"
+            placeholder="山田 太郎"
+          />
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">メールアドレス <span class="text-red-500">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent"
+            placeholder="example@email.com"
+          />
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700 mb-1">お問い合わせ内容 <span class="text-red-500">*</span></label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            rows="6"
+            class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent resize-y"
+            placeholder="お問い合わせ内容をご記入ください"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-brand-600 text-white font-bold py-3 rounded-lg hover:bg-brand-700 transition-colors text-sm"
+        >
+          送信する
+        </button>
+      </form>
+    </div>
+  </div>
+</BaseLayout>

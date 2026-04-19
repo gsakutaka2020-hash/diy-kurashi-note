@@ -1,0 +1,130 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const sortedPosts = allPosts.sort((a, b) =>
+  new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
+
+const featuredPosts = sortedPosts.slice(0, 3);
+const recentPosts = sortedPosts.slice(0, 9);
+
+const categories = [
+  { id: 'diy',    label: 'DIY・リフォーム',    icon: '🔨', desc: '古民家リフォームや壁・床のDIY記録', color: 'bg-orange-50 border-orange-200 hover:border-orange-400', textColor: 'text-orange-700' },
+  { id: 'gadget', label: 'ガジェット・家電',   icon: '📱', desc: '実際に使ったガジェット・家電の正直レビュー', color: 'bg-blue-50 border-blue-200 hover:border-blue-400', textColor: 'text-blue-700' },
+  { id: 'kurashi',label: '生活・暮らしの知恵', icon: '🌿', desc: '節約・収納・料理など暮らしを豊かにするヒント', color: 'bg-emerald-50 border-emerald-200 hover:border-emerald-400', textColor: 'text-emerald-700' },
+  { id: 'gundam', label: 'ガンダム関連',       icon: '🤖', desc: 'ガンプラ制作・ガンダム考察など', color: 'bg-purple-50 border-purple-200 hover:border-purple-400', textColor: 'text-purple-700' },
+  { id: 'ai',     label: 'AI・テクノロジー',   icon: '💡', desc: 'AIツールの使い方・最新テック情報', color: 'bg-pink-50 border-pink-200 hover:border-pink-400', textColor: 'text-pink-700' },
+];
+---
+
+<BaseLayout
+  title="DIYと暮らしのリアルノート"
+  description="古民家DIY・ガジェット・生活の知恵をリアルな体験談でお届け。費用・期間・失敗談まで全部公開します。"
+>
+  <!-- ヒーローセクション -->
+  <section class="bg-gradient-to-br from-brand-600 to-brand-800 text-white">
+    <div class="max-w-5xl mx-auto px-4 py-12 sm:py-16">
+      <div class="max-w-2xl">
+        <p class="text-brand-200 text-sm font-medium mb-2">DIY・ガジェット・暮らし</p>
+        <h1 class="text-2xl sm:text-4xl font-bold leading-snug mb-4">
+          リアルな体験談で<br />暮らしのヒントをお届け
+        </h1>
+        <p class="text-brand-100 text-sm sm:text-base leading-relaxed mb-6">
+          古民家のフルリフォームから日々使うガジェットのレビューまで、<br class="hidden sm:block" />
+          実際にやってみた体験を正直にお伝えします。
+        </p>
+        <a
+          href="#recent-posts"
+          class="inline-block bg-white text-brand-700 font-bold px-6 py-2.5 rounded-full text-sm hover:bg-brand-50 transition-colors"
+        >
+          記事を読む ↓
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- カテゴリナビ -->
+  <section class="bg-white border-b border-gray-200">
+    <div class="max-w-5xl mx-auto px-4 py-6">
+      <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
+        {categories.map(cat => (
+          <a
+            href={`/category/${cat.id}/`}
+            class={`flex flex-col items-center p-3 rounded-xl border transition-all text-center ${cat.color}`}
+          >
+            <span class="text-2xl mb-1">{cat.icon}</span>
+            <span class={`text-xs font-medium ${cat.textColor} leading-snug`}>{cat.label}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新記事 -->
+  <section id="recent-posts" class="max-w-5xl mx-auto px-4 py-10">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-lg font-bold text-gray-900">
+        <span class="text-brand-600 mr-1">▎</span>最新記事
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {recentPosts.map(post => (
+        <ArticleCard
+          title={post.data.title}
+          description={post.data.description}
+          slug={post.slug}
+          category={post.data.category}
+          pubDate={post.data.pubDate}
+          thumbnail={post.data.thumbnail}
+          tags={post.data.tags}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- カテゴリ紹介 -->
+  <section class="bg-gray-50 border-t border-gray-200">
+    <div class="max-w-5xl mx-auto px-4 py-10">
+      <h2 class="text-lg font-bold text-gray-900 mb-6">
+        <span class="text-brand-600 mr-1">▎</span>カテゴリから探す
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {categories.map(cat => (
+          <a
+            href={`/category/${cat.id}/`}
+            class={`flex items-center gap-4 p-4 rounded-xl border-2 transition-all ${cat.color}`}
+          >
+            <span class="text-3xl">{cat.icon}</span>
+            <div>
+              <p class={`font-bold text-sm ${cat.textColor}`}>{cat.label}</p>
+              <p class="text-xs text-gray-500 mt-0.5">{cat.desc}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- プロフィール -->
+  <section class="max-w-5xl mx-auto px-4 py-10">
+    <div class="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8 flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+      <div class="w-20 h-20 bg-brand-100 rounded-full flex items-center justify-center text-4xl shrink-0">
+        👨‍🔧
+      </div>
+      <div>
+        <p class="font-bold text-gray-900 mb-1">管理人：さっく</p>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          古民家をDIY+プロ業者でリフォーム中の40代。ガジェット好きで新しいものをすぐ試す性分。
+          失敗も含めて全部公開するリアルな体験談ブログです。
+        </p>
+        <a href="/about/" class="inline-block mt-3 text-sm text-brand-600 font-medium hover:underline">
+          プロフィールを詳しく見る →
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,73 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  category: string;
+  pubDate: Date;
+  thumbnail?: string;
+  tags?: string[];
+}
+
+const { title, description, slug, category, pubDate, thumbnail, tags = [] } = Astro.props;
+
+const categoryMap: Record<string, { label: string; badge: string; icon: string }> = {
+  diy:    { label: 'DIY・リフォーム',    badge: 'badge-diy',    icon: '🔨' },
+  gadget: { label: 'ガジェット・家電',   badge: 'badge-gadget', icon: '📱' },
+  kurashi:{ label: '生活・暮らしの知恵', badge: 'badge-kurashi',icon: '🌿' },
+  gundam: { label: 'ガンダム関連',       badge: 'badge-gundam', icon: '🤖' },
+  ai:     { label: 'AI・テクノロジー',   badge: 'badge-ai',     icon: '💡' },
+};
+
+const cat = categoryMap[category] ?? { label: category, badge: '', icon: '📝' };
+
+const formattedDate = new Date(pubDate).toLocaleDateString('ja-JP', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<article class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group">
+  <a href={`/blog/${slug}/`} class="block">
+    <!-- サムネイル -->
+    <div class="aspect-[16/9] bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+      {thumbnail ? (
+        <img
+          src={thumbnail}
+          alt={title}
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          loading="lazy"
+          decoding="async"
+        />
+      ) : (
+        <div class="w-full h-full flex items-center justify-center text-4xl opacity-40">
+          {cat.icon}
+        </div>
+      )}
+    </div>
+
+    <!-- コンテンツ -->
+    <div class="p-4">
+      <!-- カテゴリバッジ -->
+      <span class={`inline-block text-xs font-medium px-2 py-0.5 rounded-full mb-2 ${cat.badge}`}>
+        {cat.label}
+      </span>
+
+      <!-- タイトル -->
+      <h2 class="font-bold text-gray-900 text-sm leading-snug mb-2 line-clamp-2 group-hover:text-brand-600 transition-colors">
+        {title}
+      </h2>
+
+      <!-- 説明文 -->
+      <p class="text-xs text-gray-500 leading-relaxed line-clamp-2 mb-3">
+        {description}
+      </p>
+
+      <!-- 日付 -->
+      <time datetime={pubDate.toISOString()} class="text-xs text-gray-400">
+        {formattedDate}
+      </time>
+    </div>
+  </a>
+</article>

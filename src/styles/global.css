@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-800;
+    line-height: 1.9;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold leading-snug;
+  }
+}
+
+@layer components {
+  /* ===== 記事本文スタイル ===== */
+  .prose-article {
+    @apply text-base leading-loose text-gray-800;
+  }
+
+  .prose-article h2 {
+    @apply text-xl font-bold mt-10 mb-4 pb-2 border-b-4 border-brand-500 text-gray-900;
+  }
+
+  .prose-article h3 {
+    @apply text-lg font-bold mt-8 mb-3 pl-3 border-l-4 border-brand-400 text-gray-900;
+  }
+
+  .prose-article h4 {
+    @apply text-base font-bold mt-6 mb-2 text-gray-900;
+  }
+
+  .prose-article p {
+    @apply mb-5;
+  }
+
+  .prose-article ul {
+    @apply pl-5 mb-5 space-y-1;
+    list-style-type: disc;
+  }
+
+  .prose-article ol {
+    @apply pl-5 mb-5 space-y-1;
+    list-style-type: decimal;
+  }
+
+  .prose-article li {
+    @apply leading-relaxed;
+  }
+
+  .prose-article table {
+    @apply w-full border-collapse mb-6 text-sm;
+  }
+
+  .prose-article th {
+    @apply bg-brand-600 text-white font-bold px-3 py-2 text-left;
+  }
+
+  .prose-article td {
+    @apply border border-gray-200 px-3 py-2;
+  }
+
+  .prose-article tr:nth-child(even) td {
+    @apply bg-gray-50;
+  }
+
+  .prose-article blockquote {
+    @apply border-l-4 border-brand-300 bg-brand-50 pl-4 pr-4 py-3 my-5 text-gray-700 italic;
+  }
+
+  .prose-article a {
+    @apply text-brand-700 underline hover:text-brand-500 transition-colors;
+  }
+
+  .prose-article strong {
+    @apply font-bold text-gray-900;
+  }
+
+  .prose-article img {
+    @apply rounded-lg my-6 w-full;
+  }
+
+  .prose-article code {
+    @apply bg-gray-100 text-red-600 px-1 py-0.5 rounded text-sm font-mono;
+  }
+
+  .prose-article pre {
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-5;
+  }
+
+  .prose-article pre code {
+    @apply bg-transparent text-gray-100 p-0;
+  }
+
+  /* ===== カテゴリバッジ ===== */
+  .badge-diy    { @apply bg-orange-100 text-orange-700 border border-orange-200; }
+  .badge-gadget { @apply bg-blue-100 text-blue-700 border border-blue-200; }
+  .badge-kurashi{ @apply bg-emerald-100 text-emerald-700 border border-emerald-200; }
+  .badge-gundam { @apply bg-purple-100 text-purple-700 border border-purple-200; }
+  .badge-ai     { @apply bg-pink-100 text-pink-700 border border-pink-200; }
+
+  .cat-border-diy    { @apply border-l-4 border-orange-400; }
+  .cat-border-gadget { @apply border-l-4 border-blue-400; }
+  .cat-border-kurashi{ @apply border-l-4 border-emerald-400; }
+  .cat-border-gundam { @apply border-l-4 border-purple-400; }
+  .cat-border-ai     { @apply border-l-4 border-pink-400; }
+}

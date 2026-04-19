@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<BaseLayout
+  title="プロフィール"
+  description="DIYと暮らしのリアルノート管理人・さっくのプロフィール。古民家DIY・ガジェット好きの40代が運営するブログです。"
+>
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <Breadcrumb items={[{ label: 'プロフィール' }]} />
+
+    <h1 class="text-2xl font-bold text-gray-900 mb-8">プロフィール</h1>
+
+    <!-- プロフィールカード -->
+    <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8">
+      <div class="flex flex-col sm:flex-row gap-6 items-start">
+        <div class="w-24 h-24 bg-brand-100 rounded-full flex items-center justify-center text-5xl shrink-0">
+          👨‍🔧
+        </div>
+        <div>
+          <h2 class="text-xl font-bold text-gray-900 mb-1">さっく</h2>
+          <p class="text-sm text-gray-500 mb-4">DIYと暮らしのリアルノート 管理人</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            {['DIY好き', '古民家オーナー', 'ガジェット好き', '40代', 'ガンダム世代'].map(tag => (
+              <span class="text-xs bg-brand-50 text-brand-700 border border-brand-200 px-2.5 py-1 rounded-full">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 自己紹介 -->
+    <div class="prose-article bg-white rounded-2xl border border-gray-200 p-8">
+      <h2>このブログについて</h2>
+      <p>
+        「DIYと暮らしのリアルノート」は、古民家のリフォームやガジェット・家電のレビュー、
+        日々の暮らしの知恵を<strong>リアルな体験談</strong>でお届けするブログです。
+      </p>
+      <p>
+        「きれいごとなし」「費用も期間も全部公開」をモットーに、失敗談も含めて正直に書いています。
+        これからDIYやリフォームを検討している方、ガジェット選びで迷っている方の参考になれば嬉しいです。
+      </p>
+
+      <h2>管理人について</h2>
+      <p>
+        40代、妻と二人暮らし。数年前に築50年以上の古民家を購入し、DIYとプロの業者を組み合わせながら
+        少しずつリフォームを進めています。
+      </p>
+      <p>
+        ガジェット好きで新しいものはすぐ試す性格。ガンダム世代で今もガンプラを作り続けています。
+        最近はAI・ChatGPTにもハマっています。
+      </p>
+
+      <h2>免責事項</h2>
+      <p>
+        当ブログの情報は個人の体験に基づくものです。DIY・リフォームは専門家への相談を推奨します。
+        情報の正確性には細心の注意を払っていますが、内容については保証できません。
+      </p>
+    </div>
+  </div>
+</BaseLayout>
