@@ -11,7 +11,7 @@ thumbnail: "/images/eyecatch/eyecatch-bed-mattress.jpg"
 
 住んでいる地域では回収してもらえず、自分で処分業者に持ち込むか引取り業者に頼まなければなりません。
 
-引取り業者に頼むと料金がかかりますし、この大きさでは車にも乗りません。
+ですから、自分でやるしかない！（笑）
 
 > それでは解体に挑戦です！
 
@@ -88,8 +88,6 @@ thumbnail: "/images/eyecatch/eyecatch-bed-mattress.jpg"
 
 ![解体後の金属フレーム](/images/IMG_0218-1821x2048.jpg)
 
-![最終状態](/images/IMG_0219.jpg)
-
 車に乗せられる大きさになったので、後日、金属リサイクル業者さんに持って行くことにしました。
 
 **全部で約2時間で終了しました。**
@@ -105,6 +103,8 @@ thumbnail: "/images/eyecatch/eyecatch-bed-mattress.jpg"
 ![2026年2月の価格](/images/IMG_0223-2048x818.jpg)
 
 後日、もう一つのマットレスを解体したところ、**2026年3月は840円**になりました。
+
+![最終状態](/images/IMG_0219.jpg)
 
 ![2026年3月の価格](/images/IMG_0251-2048x738.jpg)
 
