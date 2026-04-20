@@ -4,7 +4,7 @@ description: "蛍光灯からLED照明に変えたら虫が入る・ホコリが
 pubDate: 2024-03-12
 category: gadget
 tags: ["照明", "LED", "シーリングライト", "インテリア", "節電"]
-thumbnail: "/images/lighting-bug-in-cover.jpg"
+thumbnail: "/images/eyecatch/eyecatch-lighting.png"
 ---
 
 今回はさっくの部屋の照明についてお話しします。長年、蛍光灯を使用していましたが、LED照明に変えたところいくつかの問題が出てきました。

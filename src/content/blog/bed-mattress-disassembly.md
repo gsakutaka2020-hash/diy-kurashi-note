@@ -4,7 +4,7 @@ description: "自治体回収不可のベッドマットレスをDIYで解体・
 pubDate: 2026-02-16
 category: diy
 tags: ["マットレス", "処分", "解体", "DIY", "不用品"]
-thumbnail: "/images/IMG_0193-2048x1927.jpg"
+thumbnail: "/images/eyecatch/eyecatch-bed-mattress.jpg"
 ---
 
 さっくの家には長年、放置していたベッドマットレスがあります。

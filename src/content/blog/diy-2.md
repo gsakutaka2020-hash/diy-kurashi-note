@@ -4,7 +4,7 @@ description: "古い一軒家の繊維壁・天井・襖をDIYで塗装。アク
 pubDate: 2026-01-13
 category: diy
 tags: ["DIY", "塗装", "繊維壁", "リフォーム", "内装"]
-thumbnail: "/images/前回.jpg"
+thumbnail: "/images/eyecatch/eyecatch-diy-2.jpg"
 ---
 
 今回は前回（床の間を収納スペースにした部屋）の続きで、部屋全体を塗装してみました。

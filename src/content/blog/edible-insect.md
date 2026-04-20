@@ -4,7 +4,7 @@ description: "世界的ブームの昆虫食について、栄養・環境負荷
 pubDate: 2024-04-06
 category: kurashi
 tags: ["昆虫食", "食文化", "サステナブル", "体験", "暮らし"]
-thumbnail: "/images/a5690fa5-930c-4895-af95-cf58036a7ab9-2048x1526.jpg"
+thumbnail: "/images/eyecatch/eyecatch-edible-insect.png"
 ---
 
 以前から興味があった昆虫食が、世界中で大ブームになっているとのこと。

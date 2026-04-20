@@ -4,7 +4,7 @@ description: "苗木から育てた自家の桜を毎年冬に剪定。使用し
 pubDate: 2026-02-09
 category: diy
 tags: ["剪定", "桜", "庭木", "DIY", "ガーデニング"]
-thumbnail: "/images/IMG_0190.jpg"
+thumbnail: "/images/eyecatch/eyecatch-sakura.jpg"
 ---
 
 さっくの家の空き地には、桜の木があります。接ぎ木のものではなく、苗木から育てた桜なんです。

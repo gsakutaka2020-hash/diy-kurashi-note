@@ -4,7 +4,7 @@ description: "MagSafe充電器をいろいろ比較検討した結果、Apple純
 pubDate: 2026-01-21
 category: gadget
 tags: ["MagSafe", "iPhone", "充電器", "Apple", "ガジェット"]
-thumbnail: "/images/IMG_0128-1947x2048.jpg"
+thumbnail: "/images/eyecatch/eyecatch-magsafe.jpg"
 ---
 
 以前はAnkerのワイヤレス充電器（約1,500円）を使用していましたが、ワット数が少ないこともあって充電に時間がかかっていました。

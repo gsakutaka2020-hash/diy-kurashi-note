@@ -4,7 +4,7 @@ description: "古い一軒家の床の間をDIYで収納スペースにリフォ
 pubDate: 2025-06-04
 category: diy
 tags: ["DIY", "床の間", "収納", "リフォーム", "古民家"]
-thumbnail: "/images/250604124831533-2048x2046.jpg"
+thumbnail: "/images/eyecatch/eyecatch-diy-1.jpg"
 ---
 
 親から譲り受けた古い一軒家に住んでいますが、物が多いのが悩みでした。

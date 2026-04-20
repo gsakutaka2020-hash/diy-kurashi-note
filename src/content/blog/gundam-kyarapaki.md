@@ -4,7 +4,7 @@ description: "スーパーで見かけたガンダムキャラパキをコンプ
 pubDate: 2025-08-31
 category: gundam
 tags: ["ガンダム", "キャラパキ", "チョコ", "コンプリート", "ガンプラ"]
-thumbnail: "/images/250629141140945.jpg"
+thumbnail: "/images/eyecatch/eyecatch-kyarapaki.jpg"
 ---
 
 ガンダムキャラパキをスーパーで見かけたので、買ってみました。
