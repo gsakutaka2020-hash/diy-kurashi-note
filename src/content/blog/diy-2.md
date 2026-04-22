@@ -19,7 +19,9 @@ thumbnail: "/images/eyecatch/eyecatch-diy-2.jpg"
 
 ## 天井の塗装
 
-色は定番の白。白と言ったら**『ノボクリーン』**！
+色は定番の白。白と言ったら**[ノボクリーン](https://a.r10.to/h5E63k)**！
+
+**コスパ最強。品質も問題なし！**
 
 ![ノボクリーン](/images/250604124918266.jpg)
 
@@ -33,8 +35,6 @@ thumbnail: "/images/eyecatch/eyecatch-diy-2.jpg"
 
 ![天井の塗装中](/images/IMG_0030-2048x1467.jpg)
 
-**コスパ最強。品質も問題なし！**
-
 **3回塗装しました。疲れた～**
 
 ## 壁の塗装
@@ -43,7 +43,7 @@ thumbnail: "/images/eyecatch/eyecatch-diy-2.jpg"
 
 ### 下地処理：アクドメール
 
-使用したのは『**アクドメール**』。
+使用したのは**[アクドメール](https://a.r10.to/hP6LE2)**。
 
 ![アクドメール本体](/images/250604124831533-2048x2046.jpg)
 
@@ -55,8 +55,10 @@ thumbnail: "/images/eyecatch/eyecatch-diy-2.jpg"
 ![下地処理前の繊維壁](/images/IMG_0018-2048x1487.jpg)
 
 ![アクドメール1回目塗布](/images/IMG_0023-2048x1439.jpg)
+*アクドメール1回目塗布*
 
 ![アクドメール2回目塗布](/images/IMG_0027-1-2048x1414.jpg)
+*アクドメール2回目塗布*
 
 よく乾燥させてから塗装します。
 
@@ -103,14 +105,21 @@ thumbnail: "/images/eyecatch/eyecatch-diy-2.jpg"
 壁、扉、柱を塗装していきます。
 
 ![下地処理](/images/IMG_0069-2048x1402.jpg)
+*アクドメール塗布*
 
 ![1回目塗装](/images/IMG_0074-2048x1481.jpg)
 
+繊維壁は、前回の砂壁同様、凸凹で完全にマスキングできません。
+はみ出した部分は筆で修正しました。
+
 ![2回目塗装](/images/IMG_0075.jpg)
+*２回目　塗装*
 
 ![3回目塗装](/images/IMG_0079-1801x2048.jpg)
 
 ## 襖の塗装
+
+*３回目　塗装*
 
 襖の塗料はカインズの「**Whity Colors**」シリーズ。ココアグレイを塗りました。
 
@@ -132,4 +141,4 @@ thumbnail: "/images/eyecatch/eyecatch-diy-2.jpg"
 
 計3回ずつ塗装すると仕上がりがきれいになります。
 
-…では、また次のDIYでお会いしましょう～
+では、また次のDIYでお会いしましょう～
