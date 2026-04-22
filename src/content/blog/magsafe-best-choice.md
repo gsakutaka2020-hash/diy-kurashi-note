@@ -8,7 +8,7 @@ thumbnail: "/images/eyecatch/eyecatch-magsafe.jpg"
 ---
 
 以前はAnkerのワイヤレス充電器（約1,500円）を使用していましたが、ワット数が少ないこともあって充電に時間がかかっていました。
-![Ankerのワイヤレス充電器[充電器 外観](/images/IMG_0130-2048x1779.jpg)
+![Ankerのワイヤレス充電器 外観](/images/IMG_0130-2048x1779.jpg)
 
 せっかくなので今回は、MagSafe充電器を購入しようと思い、いろいろ調べてみました。
 
