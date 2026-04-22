@@ -14,6 +14,7 @@ thumbnail: "/images/eyecatch/eyecatch-kyarapaki.jpg"
 ![パッケージ外観](/images/250629141140945.jpg)
 ![ガンダム（フェイスアップ）](/images/250721175022853.jpg)
 ![シリアルパズゴック詳細](/images/250831125132379.jpg)
+![パッケージ詳細](/images/250622155420879.jpg)
 
 
 
