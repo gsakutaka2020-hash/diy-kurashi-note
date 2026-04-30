@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: gsakutaka2020-hash/diy-kurashi-note
   branch: main
+  base_url: https://diy-kurashi-note.com
 
 media_folder: public/images
 public_folder: /images
