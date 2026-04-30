@@ -2,7 +2,8 @@ backend:
   name: github
   repo: gsakutaka2020-hash/diy-kurashi-note
   branch: main
-  base_url: https://diy-kurashi-note.com
+  auth_type: pkce
+  app_id: Ov23l12TmJJ6X31AA1SH
 
 media_folder: public/images
 public_folder: /images
