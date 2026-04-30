@@ -1,0 +1,53 @@
+media:
+  input: public/images
+  output: /images
+
+content:
+  - name: blog
+    label: ブログ記事
+    type: collection
+    path: src/content/blog
+    view:
+      fields: [title, pubDate, category]
+    fields:
+      - name: title
+        label: タイトル
+        type: string
+        required: true
+      - name: description
+        label: 説明文
+        type: text
+        required: true
+      - name: pubDate
+        label: 公開日
+        type: date
+      - name: updatedDate
+        label: 更新日
+        type: date
+        required: false
+      - name: category
+        label: カテゴリ
+        type: select
+        required: true
+        options:
+          values:
+            - { label: 'DIY・リフォーム', value: diy }
+            - { label: 'ガジェット・家電', value: gadget }
+            - { label: '生活・暮らしの知恵', value: kurashi }
+            - { label: 'ガンダム関連', value: gundam }
+            - { label: 'AI・テクノロジー', value: ai }
+      - name: tags
+        label: タグ
+        type: string
+        list: true
+      - name: thumbnail
+        label: アイキャッチ画像
+        type: image
+        required: false
+      - name: draft
+        label: 下書き
+        type: boolean
+        default: false
+      - name: body
+        label: 本文
+        type: rich-text
