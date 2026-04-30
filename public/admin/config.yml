@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/images
+public_folder: /images
+
+locale: ja
+
+collections:
+  - name: blog
+    label: ブログ記事
+    folder: src/content/blog
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: タイトル, name: title, widget: string }
+      - { label: 説明文, name: description, widget: text }
+      - { label: 公開日, name: pubDate, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false }
+      - { label: 更新日, name: updatedDate, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false, required: false }
+      - label: カテゴリ
+        name: category
+        widget: select
+        options:
+          - { label: DIY・リフォーム, value: diy }
+          - { label: ガジェット・家電, value: gadget }
+          - { label: 生活・暮らしの知恵, value: kurashi }
+          - { label: ガンダム関連, value: gundam }
+          - { label: AI・テクノロジー, value: ai }
+      - { label: タグ, name: tags, widget: list, default: [] }
+      - { label: アイキャッチ画像, name: thumbnail, widget: image, required: false }
+      - { label: 下書き, name: draft, widget: boolean, default: false }
+      - { label: 本文, name: body, widget: markdown }

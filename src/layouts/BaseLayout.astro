@@ -22,9 +22,21 @@ const props = Astro.props;
   <head>
     <SEO {...props} />
     <meta name="google-site-verification" content="uBagleSbSIHDy_3tjOhE-FFWSoKf_w6jXSB0hqk39F4" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     <Header />
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
 
     <main id="main-content">
       <slot />
