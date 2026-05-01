@@ -1,21 +1,26 @@
 ---
-title: "自宅の桜の木を剪定する方法【道具・時期・切り口の処理まで実体験で解説】"
-description: "苗木から育てた自家の桜を毎年冬に剪定。使用したノコギリ2種と高所作業の注意点、殺菌塗布剤の使い方まで実体験をレポート。"
+title: 自宅の桜の木を剪定する方法【道具・時期・切り口の処理まで実体験で解説】
+description: 苗木から育てた自家の桜を毎年冬に剪定。使用したノコギリ2種と高所作業の注意点、殺菌塗布剤の使い方まで実体験をレポート。
 pubDate: 2026-02-09
+updatedDate: 2026-05-01
 category: diy
-tags: ["剪定", "桜", "庭木", "DIY", "ガーデニング"]
-thumbnail: "/images/eyecatch/eyecatch-sakura.jpg"
+tags:
+  - 剪定
+  - 桜
+  - 庭木
+  - DIY
+  - ガーデニング
+thumbnail: /images/eyecatch/eyecatch-sakura.jpg
+draft: false
 ---
-
 さっくの家の空き地には、桜の木があります。接ぎ木のものではなく、苗木から育てた桜なんです。
 
 小さな苗木だったのが、今では立派に育ちました。
 
-それで、桜は枝がたくさん出てくるので年に1回、冬場に剪定をしています。
+それで、桜は枝がたくさん出てくるので年に１回、冬場(１月頃)に剪定をしています。
 
 ![剪定前の桜の木](/images/IMG_0190.jpg)
 ![太い桜の幹](/images/IMG_0145-2048x1616.jpg)
-
 
 ## 使用した道具
 
@@ -45,7 +50,6 @@ thumbnail: "/images/eyecatch/eyecatch-sakura.jpg"
 
 桜が咲くと上からまじかに見ることができるのが嬉しいポイントです。
 ![剪定中1](/images/IMG_0166-2048x1444.jpg)
-
 
 ## 剪定作業
 
@@ -77,7 +81,7 @@ thumbnail: "/images/eyecatch/eyecatch-sakura.jpg"
 
 使用した殺菌塗布剤：**トップジンMペースト**
 
-トップジンMペースト▶ https://a.r10.to/hY6brS
+トップジンMペースト▶ [https://a.r10.to/hY6brS](https://a.r10.to/hY6brS)
 
 ![使用した農薬・殺菌塗布剤](/images/IMG_0179-1-2048x910.jpg)
 
