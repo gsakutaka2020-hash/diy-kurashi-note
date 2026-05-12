@@ -4,7 +4,7 @@ export async function GET() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
   const siteUrl = 'https://diy-kurashi-note.com';
 
-  const categories = ['diy', 'gadget', 'kurashi', 'gundam', 'ai'];
+  const categories = ['diy', 'gadget', 'kurashi', 'gundam'];
 
   const staticPages = [
     { url: `${siteUrl}/`, priority: '1.0', changefreq: 'daily' },

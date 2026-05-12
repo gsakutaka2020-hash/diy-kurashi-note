@@ -5,7 +5,7 @@ import ArticleCard from '../../components/ArticleCard.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 
 export async function getStaticPaths() {
-  const categories = ['diy', 'gadget', 'kurashi', 'gundam', 'ai'] as const;
+  const categories = ['diy', 'gadget', 'kurashi', 'gundam'] as const;
   return categories.map(cat => ({
     params: { category: cat },
   }));
@@ -18,7 +18,6 @@ const categoryInfo: Record<string, { label: string; description: string; icon: s
   gadget: { label: 'ガジェット・家電',   description: '実際に購入・使用したガジェット・家電の正直レビュー。メリット・デメリットを包み隠さず。', icon: '📱', color: 'text-blue-600' },
   kurashi:{ label: '生活・暮らしの知恵', description: '節約・収納・料理・掃除など、毎日の暮らしを快適にするヒントをお届け。', icon: '🌿', color: 'text-emerald-600' },
   gundam: { label: 'ガンダム関連',       description: 'ガンプラ制作記録・ガンダム作品の考察・聖地巡礼など。ガンダム好きによるガンダム記事。', icon: '🤖', color: 'text-purple-600' },
-  ai:     { label: 'AI・テクノロジー',   description: 'ChatGPT・Claude・画像生成AIなど最新のAIツール活用術と技術トレンド解説。', icon: '💡', color: 'text-pink-600' },
 };
 
 const info = categoryInfo[category!] ?? { label: category, description: '', icon: '📝', color: '' };

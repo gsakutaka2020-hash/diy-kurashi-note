@@ -19,7 +19,6 @@ const categoryMap: Record<string, { label: string; href: string; borderClass: st
   gadget: { label: 'ガジェット・家電',   href: '/category/gadget/', borderClass: 'cat-border-gadget' },
   kurashi:{ label: '生活・暮らしの知恵', href: '/category/kurashi/',borderClass: 'cat-border-kurashi' },
   gundam: { label: 'ガンダム関連',       href: '/category/gundam/', borderClass: 'cat-border-gundam' },
-  ai:     { label: 'AI・テクノロジー',   href: '/category/ai/',     borderClass: 'cat-border-ai' },
 };
 
 const cat = categoryMap[category] ?? { label: category, href: '/', borderClass: '' };
@@ -134,7 +133,6 @@ const formattedUpd = updatedDate
                 { href: '/category/gadget/', label: '📱 ガジェット・家電',   cls: 'hover:text-blue-600' },
                 { href: '/category/kurashi/',label: '🌿 生活・暮らしの知恵', cls: 'hover:text-emerald-600' },
                 { href: '/category/gundam/', label: '🤖 ガンダム関連',       cls: 'hover:text-purple-600' },
-                { href: '/category/ai/',     label: '💡 AI・テクノロジー',   cls: 'hover:text-pink-600' },
               ].map(item => (
                 <li>
                   <a href={item.href} class={`text-sm text-gray-600 transition-colors ${item.cls}`}>
